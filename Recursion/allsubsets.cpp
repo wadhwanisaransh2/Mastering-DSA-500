@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-
+//adding comments
 void printSubsets(vector<int>& arr, vector<int>& subset, int index) {
     if (index == arr.size()) {
         // Print current subset
