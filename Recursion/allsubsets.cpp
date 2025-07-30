@@ -13,7 +13,7 @@ void printSubsets(vector<int>& arr, vector<int>& subset, int index) {
         return;
     }
 
-    // Exclude the current element
+    // Exclude the current element in that
     printSubsets(arr, subset, index + 1);
 
     // Include the current element
