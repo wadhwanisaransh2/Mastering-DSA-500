@@ -6,8 +6,7 @@ public:
         while (l < r) {
             if (s[l] != s[r]) return false;
             l++;
-            r--;
-        }
+            r--;}
         return true;
     }
 
