@@ -1,3 +1,8 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
 class Solution {
 public:
     // Helper function to check if a string is a palindrome
@@ -6,23 +11,24 @@ public:
         while (l < r) {
             if (s[l] != s[r]) return false;
             l++;
-            r--;}
+            r--;
+        }
         return true;
     }
 
     // Backtracking function to generate partitions
     void gap(string s, vector<string>& partition, vector<vector<string>>& ans) {
-        if (s.size() == 0) {
-            ans.push_back(partition);
+        if (s.empty()) {
+            ans.push_back(partition); // found a valid partition
             return;
         }
-        int n = s.size();
-        for (int i = 0; i < n; i++) {
-            string part = s.substr(0, i + 1);
+
+        for (int i = 0; i < s.size(); i++) {
+            string part = s.substr(0, i + 1); // prefix substring
             if (isPalin(part)) {
-                partition.push_back(part);
-                gap(s.substr(i + 1), partition, ans);
-                partition.pop_back(); // backtrack
+                partition.push_back(part); // choose
+                gap(s.substr(i + 1), partition, ans); // explore
+                partition.pop_back(); // unchoose (backtrack)
             }
         }
     }
@@ -35,3 +41,24 @@ public:
         return ans;
     }
 };
+
+// 🧪 Test the code
+int main() {
+    Solution sol;
+    string input;
+    cout << "Enter a string: ";
+    cin >> input;
+
+    vector<vector<string>> result = sol.partition(input);
+
+    cout << "\nAll Palindrome Partitions:\n";
+    for (const auto& partition : result) {
+        cout << "[ ";
+        for (const string& s : partition) {
+            cout << "\"" << s << "\" ";
+        }
+        cout << "]\n";
+    }
+
+    return 0;
+}
