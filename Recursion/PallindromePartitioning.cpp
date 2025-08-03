@@ -57,6 +57,7 @@ int main() {
         for (const string& s : partition) {
             cout << "\"" << s << "\" ";
         }
-        cout << "]\n";}
+        cout << "]\n";
+    }
          return 0;
 }
