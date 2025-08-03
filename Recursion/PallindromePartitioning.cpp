@@ -32,8 +32,6 @@ public:
             }
         }
     }
-
-    // Main function to be called
     vector<vector<string>> partition(string s) {
         vector<vector<string>> ans;
         vector<string> partition;
