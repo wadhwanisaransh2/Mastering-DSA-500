@@ -41,8 +41,6 @@ public:
         return ans;
     }
 };
-
-// 🧪 Test the code
 int main() {
     Solution sol;
     string input;
