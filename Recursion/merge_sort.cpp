@@ -38,5 +38,4 @@ void mergeSort(int arr[], int left, int right) {
 
         // Merge the sorted halves
         merge(arr, left, mid, right);
-    }
-}
+    }}
