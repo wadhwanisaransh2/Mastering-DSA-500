@@ -58,7 +58,5 @@ int main() {
             cout << "\"" << s << "\" ";
         }
         cout << "]\n";
-    }
-
-    return 0;
+    }return 0;
 }
