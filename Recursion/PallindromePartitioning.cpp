@@ -50,7 +50,6 @@ int main() {
     cin >> input;
 
     vector<vector<string>> result = sol.partition(input);
-
     cout << "\nAll Palindrome Partitions:\n";
     for (const auto& partition : result) {
         cout << "[ ";
