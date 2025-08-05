@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 // Function to merge two sorted subarrays
 void merge(int arr[], int left, int mid, int right) {
     int n1 = mid - left + 1; // size of left subarray
@@ -21,7 +20,6 @@ void merge(int arr[], int left, int mid, int right) {
         else
             arr[k++] = R[j++];
     }
-
     // Copy remaining elements
     while (i < n1) arr[k++] = L[i++];
     while (j < n2) arr[k++] = R[j++];
@@ -35,7 +33,8 @@ void mergeSort(int arr[], int left, int right) {
         // Sort first and second halves
         mergeSort(arr, left, mid);
         mergeSort(arr, mid + 1, right);
-        
+
         // Merge the sorted halves
         merge(arr, left, mid, right);
-    }}
+    }
+}
