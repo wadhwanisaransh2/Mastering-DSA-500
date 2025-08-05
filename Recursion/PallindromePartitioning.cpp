@@ -15,8 +15,6 @@ public:
         }
         return true;
     }
-
-    // Backtracking function to generate partitions
     void gap(string s, vector<string>& partition, vector<vector<string>>& ans) {
         if (s.empty()) {
             ans.push_back(partition); // found a valid partition
