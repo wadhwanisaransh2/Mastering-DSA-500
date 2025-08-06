@@ -33,7 +33,6 @@ public:
         return pos[0] == make_pair(0, 0);
     }
 };
-
 int main() {
     Solution sol;
     vector<vector<int>> grid1 = {
