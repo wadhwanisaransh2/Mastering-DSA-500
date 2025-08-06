@@ -36,7 +36,6 @@ public:
 
 int main() {
     Solution sol;
-
     vector<vector<int>> grid1 = {
         {0, 11, 16, 5, 20},
         {17, 4, 19, 10, 15},
