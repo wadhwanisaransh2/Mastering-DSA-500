@@ -53,6 +53,5 @@ int main() {
 
     cout << "Grid 1 is a valid knight tour: " << (sol.checkValidGrid(grid1) ? "true" : "false") << endl;
     cout << "Grid 2 is a valid knight tour: " << (sol.checkValidGrid(grid2) ? "true" : "false") << endl;
-
     return 0;
 }
