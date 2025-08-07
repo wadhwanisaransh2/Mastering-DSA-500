@@ -28,7 +28,6 @@ public:
                 return false;
             }
         }
-
         // Step 0 should always be at (0, 0)
         return pos[0] == make_pair(0, 0);
     }
