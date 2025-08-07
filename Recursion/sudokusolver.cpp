@@ -1,10 +1,8 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-
 class Solution {
 public:
-    // Check if it's valid to place 'c' at board[row][col]
     bool isValid(vector<vector<char>>& board, int row, int col, char c) {
         for (int i = 0; i < 9; i++) {
             // Check the row
