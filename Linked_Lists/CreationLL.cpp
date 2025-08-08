@@ -16,7 +16,6 @@ class List {
     List() {
         head=tail=NULL;
     }
-    //Create a new Node
     void push_front(int val) {
         Node* newNode = new Node(val);
         if(head==NULL) {
@@ -24,6 +23,7 @@ class List {
             return;
         }
     }
+    
 };
 int main() {
     List ll;
