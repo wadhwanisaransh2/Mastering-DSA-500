@@ -93,6 +93,5 @@ int main() {
     ll.push_front(3);
     ll.insert(2,2);
     ll.printLL();
-    // ll.insert(1,2)
     return 0;
 }
