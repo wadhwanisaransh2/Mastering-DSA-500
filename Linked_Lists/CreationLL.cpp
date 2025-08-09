@@ -45,6 +45,18 @@ class List {
         temp->next = NULL;
         delete temp;
     }
+    int search(int key) {
+        Node *temp = head;
+        int idx = 0;
+        while(temp!=NULL) {
+            if(temp->data == key) {
+                return idx;
+            }
+            temp = temp->next;
+            idx++;
+        }
+        return -1;
+    }
     void insert(int val, int pos) {
         if(pos<0) {
             return;
@@ -92,6 +104,6 @@ int main() {
     ll.push_front(2);
     ll.push_front(3);
     ll.insert(2,2);
-    ll.printLL();
+    cout<<ll.search(4);
     return 0;
 }
