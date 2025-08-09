@@ -35,6 +35,15 @@ class List {
         tail->next = newNode;
         tail = tail->next;
     }
+    void pop_front() {
+        if(head==NULL) {
+            return;
+        }
+        Node *temp = head;
+        head = head->next;
+        temp->next = NULL;
+        delete temp;
+    }
     void printLL(){
         Node *temp=head;
         while(temp!=NULL) {
@@ -53,6 +62,8 @@ int main() {
     ll.push_back(4);
     ll.push_back(5);
     ll.push_back(6);
+    ll.pop_front();
+    ll.pop_front();
     ll.printLL();
     return 0;
 }
