@@ -10,17 +10,30 @@ class Node{
         next = prev = NULL;
     }
 };
-class DoublyLL {
+class DLL {
     public:
-    
     Node *head;
     Node *tail;
-    DoublyLL() {
+    DLL() {
         head = tail = NULL;
     }
+    void push_front(int val) {
+        Node *newNode = new Node(val);
+        if(head==NULL) {
+            head =tail = newNode; 
+        }
+        else{
+            newNode ->next = head; 
+            head->prev = newNode;
+            head = newNode;
 
+        }
+    }
 };
 int main() {
-
+    DLL mylist; // Create an object of the DLL class
+    mylist.push_front(1);
+    mylist.push_front(2);
+    mylist.push_front(3);
     return 0;
 }
