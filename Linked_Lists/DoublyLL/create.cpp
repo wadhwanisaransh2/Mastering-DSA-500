@@ -29,11 +29,20 @@ class DLL {
 
         }
     }
+    void printLL() {
+        Node *temp = head;
+        while(temp!=NULL) {
+            cout<<temp->data<<"->";
+            temp = temp->next;
+        }
+        cout<<"NULL";
+    }
 };
 int main() {
     DLL mylist; // Create an object of the DLL class
     mylist.push_front(1);
     mylist.push_front(2);
     mylist.push_front(3);
+    mylist.printLL();
     return 0;
 }
