@@ -56,6 +56,7 @@ int main() {
     mylist.push_front(2);
     mylist.push_front(3);
     mylist.push_back(3);
+    mylist.push_back(4);
     mylist.printLL();
     return 0;
 }
