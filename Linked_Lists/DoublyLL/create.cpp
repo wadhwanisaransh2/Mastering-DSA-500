@@ -29,6 +29,18 @@ class DLL {
 
         }
     }
+    void push_back(int val) {
+        Node *newNode = new Node(val);
+        if(head==NULL) {
+            head =tail = newNode; 
+        }
+        else{
+            tail ->next = newNode;
+            newNode->prev  = tail;
+            newNode->next  = NULL;
+            tail = newNode;
+        }
+    }
     void printLL() {
         Node *temp = head;
         while(temp!=NULL) {
@@ -43,6 +55,7 @@ int main() {
     mylist.push_front(1);
     mylist.push_front(2);
     mylist.push_front(3);
+    mylist.push_back(3);
     mylist.printLL();
     return 0;
 }
