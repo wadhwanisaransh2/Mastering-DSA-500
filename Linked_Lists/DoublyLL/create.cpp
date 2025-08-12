@@ -49,6 +49,23 @@ class DLL {
         }
         cout<<"NULL";
     }
+   void pop_front() {
+    if (head == NULL) {
+        // Empty list
+        return;
+    }
+
+    Node *temp = head;
+    head = head->next;
+
+    if (head != NULL) {
+        head->prev = NULL;  // remove link to old head
+    } else {
+        tail = NULL;        // list is now empty
+    }
+
+    delete temp; // free memory
+}
 };
 int main() {
     DLL mylist; // Create an object of the DLL class
@@ -57,6 +74,7 @@ int main() {
     mylist.push_front(3);
     mylist.push_back(3);
     mylist.push_back(4);
+    mylist.pop_front();
     mylist.printLL();
     return 0;
 }
