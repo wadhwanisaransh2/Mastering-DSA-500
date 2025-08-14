@@ -53,6 +53,22 @@ public :
             tail = newnode;
         }
     }
+    void deleteathead() {
+        if(head ==NULL) {
+            return;
+        }
+        else if(head==tail) {
+            delete head;
+            head = tail = NULL;
+        }
+        else{
+            Node *temp = head;
+            head=head->next;
+            tail ->next = head;
+            temp ->next= NULL;
+            delete temp;
+        }
+    }
 };
 int main() {
     CircularLL ll;
@@ -62,7 +78,7 @@ int main() {
     ll.insertattail(4);
     ll.insertattail(5);
     ll.insertattail(6);
-
+    ll.deleteathead();
     ll.print();
     return 0;
 }
