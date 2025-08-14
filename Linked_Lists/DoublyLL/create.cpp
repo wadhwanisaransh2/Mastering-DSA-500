@@ -66,6 +66,17 @@ class DLL {
 
     delete temp; // free memory
 }
+void pop_back() {
+    if(head==NULL) {
+        return;
+    }
+    Node* temp = tail;
+    tail = tail->prev;
+    temp->prev = NULL;
+    tail->next = NULL;
+    
+    delete temp;
+}
 };
 int main() {
     DLL mylist; // Create an object of the DLL class
@@ -75,6 +86,7 @@ int main() {
     mylist.push_back(3);
     mylist.push_back(4);
     mylist.pop_front();
+    mylist.pop_back();
     mylist.printLL();
     return 0;
 }
