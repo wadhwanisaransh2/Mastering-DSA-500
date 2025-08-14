@@ -69,6 +69,26 @@ public :
             delete temp;
         }
     }
+    void deleteatatail() {
+         if(head ==NULL) {
+            return;
+        }
+        else if(head==tail) {
+            delete head;
+            head = tail = NULL;
+        }
+        else{
+            Node *temp = tail;
+            Node *prev  = head;
+            while(prev->next!=tail) {
+                prev = prev ->next;
+            }
+            tail = prev;
+            tail ->next = head;
+            tail->next = NULL;
+            delete temp;
+        }
+    }
 };
 int main() {
     CircularLL ll;
@@ -79,6 +99,8 @@ int main() {
     ll.insertattail(5);
     ll.insertattail(6);
     ll.deleteathead();
+    ll.deleteatatail();
+    ll.deleteatatail();
     ll.print();
     return 0;
 }
