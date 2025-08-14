@@ -41,12 +41,28 @@ public :
         }
         cout<<"NULL";
     }
+    void insertattail(int val) {
+          Node *newnode = new Node(val);
+        if(head==NULL) {
+            head = tail = newnode;
+            tail -> next  = head;
+        }
+        else{
+            newnode->next = head;
+            tail ->next = newnode;
+            tail = newnode;
+        }
+    }
 };
 int main() {
     CircularLL ll;
     ll.InsertatHead(1);
     ll.InsertatHead(2);
     ll.InsertatHead(3);
+    ll.insertattail(4);
+    ll.insertattail(5);
+    ll.insertattail(6);
+
     ll.print();
     return 0;
 }
