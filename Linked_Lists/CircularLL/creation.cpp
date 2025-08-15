@@ -69,26 +69,29 @@ public :
             delete temp;
         }
     }
-    void deleteatatail() {
-         if(head ==NULL) {
-            return;
-        }
-        else if(head==tail) {
-            delete head;
-            head = tail = NULL;
-        }
-        else{
-            Node *temp = tail;
-            Node *prev  = head;
-            while(prev->next!=tail) {
-                prev = prev ->next;
-            }
-            tail = prev;
-            tail ->next = head;
-            tail->next = NULL;
-            delete temp;
-        }
+void deleteatatail() {
+    if (head == NULL) {
+        return; // Empty list
     }
+    else if (head == tail) {
+        delete head; // Only one node
+        head = tail = NULL;
+    }
+    else {
+        Node* temp = tail;   // Node to be deleted
+        Node* prev = head;
+
+        // Traverse until prev points to node before tail
+        while (prev->next != tail) {
+            prev = prev->next;
+        }
+
+        tail = prev;        // Update tail to previous node
+        tail->next = head;  // Maintain circular link
+        delete temp;        // Delete old tail
+    }
+}
+
 };
 int main() {
     CircularLL ll;
@@ -98,9 +101,15 @@ int main() {
     ll.insertattail(4);
     ll.insertattail(5);
     ll.insertattail(6);
+    cout<<endl;
     ll.deleteathead();
-    ll.deleteatatail();
+    ll.print();
+    cout<<endl;
     ll.deleteatatail();
     ll.print();
+    cout<<endl;
+    ll.deleteatatail();
+    ll.print();
+    cout<<endl;
     return 0;
 }
