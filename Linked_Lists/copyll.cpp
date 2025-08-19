@@ -73,9 +73,8 @@ void printList(Node* head) {
     }
 }
 
-int main() {
-    // Example: Creating list: 1 -> 2 -> 3
-    Node* n1 = new Node(1);
+int main()
+ {    Node* n1 = new Node(1);
     Node* n2 = new Node(2);
     Node* n3 = new Node(3);
 
