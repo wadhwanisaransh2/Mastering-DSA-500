@@ -84,7 +84,7 @@ int main() {
 
     n1->random = n3; // 1 -> 3
     n2->random = n1; // 2 -> 1
-    n3->random = n2; // 3 -> 2
+    n3->random = n2; 
 
     cout << "Original List:\n";
     printList(n1);
