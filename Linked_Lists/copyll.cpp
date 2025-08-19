@@ -82,7 +82,6 @@ int main() {
     n1->next = n2;
     n2->next = n3;
 
-    // Adding random pointers
     n1->random = n3; // 1 -> 3
     n2->random = n1; // 2 -> 1
     n3->random = n2; // 3 -> 2
