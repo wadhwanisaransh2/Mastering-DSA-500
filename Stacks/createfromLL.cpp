@@ -3,19 +3,19 @@
 #include<list>
 using namespace std;
 class Stack{
-    vector<int> v;
+    list <int> ll;
  public:
     void push(int val) {
-       
+       ll.push_front(val);
     }
     void pop() {
-       
+       ll.pop_front();
     }
     int top() {
-        
+        return ll.front();
     }
     bool isempty() {
-       
+       return ll.size()==0;
     }
 };
 int main() {
