@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 class Solution {
 public:
     bool isValid(string s) {
@@ -29,11 +28,9 @@ public:
         return st.empty();
     }
 };
-
 int main() {
     Solution sol;
 
-    // Test cases
     cout << boolalpha; // print true/false instead of 1/0
     cout << sol.isValid("()") << endl;        // true
     cout << sol.isValid("()[]{}") << endl;    // true
