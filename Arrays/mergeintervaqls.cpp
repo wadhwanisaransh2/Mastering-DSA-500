@@ -6,7 +6,6 @@ public:
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
         // Step 1: Sort intervals by start time
         sort(intervals.begin(), intervals.end());
-
         vector<vector<int>> merged;
         
         for (auto interval : intervals) {
