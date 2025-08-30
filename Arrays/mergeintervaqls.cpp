@@ -12,7 +12,6 @@ public:
                 merged.push_back(interval);
             }
             else {
-                
                 merged.back()[1] = max(merged.back()[1], interval[1]);
             }}
         return merged;
