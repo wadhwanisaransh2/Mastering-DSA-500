@@ -12,7 +12,7 @@ public:
                 merged.push_back(interval);
             }
             else {
-                // Overlapping → merge by updating end
+                
                 merged.back()[1] = max(merged.back()[1], interval[1]);
             }}
         return merged;
