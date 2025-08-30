@@ -7,7 +7,6 @@ public:
         // Step 1: Sort intervals by start time
         sort(intervals.begin(), intervals.end());
         vector<vector<int>> merged;
-        
         for (auto interval : intervals) {
             // If merged is empty OR no overlap
             if (merged.empty() || merged.back()[1] < interval[0]) {
