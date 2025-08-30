@@ -8,7 +8,6 @@ public:
         sort(intervals.begin(), intervals.end());
         vector<vector<int>> merged;
         for (auto interval : intervals) {
-            // If merged is empty OR no overlap
             if (merged.empty() || merged.back()[1] < interval[0]) {
                 merged.push_back(interval);
             }
