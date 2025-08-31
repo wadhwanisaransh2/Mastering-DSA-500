@@ -41,7 +41,6 @@ int main() {
     int target = 0;
 
     vector<vector<int>> ans = s.fourSum(nums, target);
-
     cout << "Quadruplets: \n";
     for (auto &quad : ans) {
         for (int x : quad) cout << x << " ";
