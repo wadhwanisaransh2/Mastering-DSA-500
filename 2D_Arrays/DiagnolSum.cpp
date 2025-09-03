@@ -3,7 +3,6 @@ using namespace std;
 int DiagnolSum(int matrix[][3],int r,int c){
     int sum =0;
     for(int i=0;i<r;i++) {
-        
         sum += matrix[i][i];
         if(i!=r-i-1)
             sum += matrix[i][r-1-i];
