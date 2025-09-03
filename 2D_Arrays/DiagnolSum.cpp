@@ -8,7 +8,6 @@ int DiagnolSum(int matrix[][3],int r,int c){
         if(i!=r-i-1)
             sum += matrix[i][r-1-i];
     }
-
 return sum;
 }
 int main() {
