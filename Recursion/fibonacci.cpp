@@ -13,7 +13,6 @@ void printFibonacciSeries(int n) {
     }
     cout << endl;
 }
-
 int main() {
     int n = 8;
     cout << "Fibonacci Series up to " << n << " terms:\n";
